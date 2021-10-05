@@ -2,11 +2,8 @@ import tensorboard as tf
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg 
 import pandas as pd
-import datetime
-import zipfile
-import os
 
-def view_random_image(target_dir, classes): 
+def view_random_image(): 
   rand_class = random.choice(classes)
   #Set up the random directory 
   target_folder = target_dir + "/" + rand_class
@@ -17,3 +14,7 @@ def view_random_image(target_dir, classes):
   plt.imshow(img)
   plt.axis(False)
   plt.title("Class: " +rand_class) 
+
+  
+def sample():
+  print("hello")
