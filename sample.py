@@ -1,5 +1,5 @@
 def sampler(name):
-  PRINT(name)
+  print(name)
   
 
   
