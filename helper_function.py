@@ -18,3 +18,4 @@ def view_random_image():
   
 def sample():
   print("hello")
+   
