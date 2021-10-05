@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg 
 import pandas as pd
 
-def view_random_image(): 
+def view_random_image(target_dir, classes): 
   rand_class = random.choice(classes)
   #Set up the random directory 
   target_folder = target_dir + "/" + rand_class
