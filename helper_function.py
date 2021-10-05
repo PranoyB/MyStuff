@@ -4,6 +4,7 @@ import matplotlib.image as mpimg
 import pandas as pd
 import datetime
 import zipfile
+import os
 
 def view_random_image(target_dir, classes): 
   '''
@@ -54,9 +55,19 @@ def plot_losses(model_history):
   plt.grid(True)
 
   
-  def unzipper(link,folder_name):
-    ''' 
-    Given the link to download the ziped file from, it saves the unziped version with foldername in the working directory
-    '''
-    !wget link
-    !unzip name+".zip"
+def unzipper(link,folder_name):
+  ''' 
+  Given the link to download the ziped file from, it saves the unziped version with foldername in the working directory
+  '''
+  !wget link
+  !unzip name+".zip"
+  
+  
+def walk_through_dir(foldername):
+  '''
+  given the folder name constaining training and tresting data, we can get some more data
+  '''
+  for dirpath, dirnames, filenames in os.walk(foldername):
+    print(f"There are {len(dirnames)} directories and {len(filenames)} images in '{dirpath}'")
+    if len(dirnames)==10:
+    class_name.append(dirnames)
