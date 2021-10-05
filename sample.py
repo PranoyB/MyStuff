@@ -1,2 +1,5 @@
-def sample():
-  PRINT("hELLO")
+def sampler(name):
+  PRINT(name)
+  
+
+  
